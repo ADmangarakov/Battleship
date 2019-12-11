@@ -151,9 +151,29 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Battleship.h" />
+    <ClInclude Include="Carrier.h" />
+    <ClInclude Include="ConsolePlayer.h" />
+    <ClInclude Include="Cruiser.h" />
+    <ClInclude Include="Destroyer.h" />
+    <ClInclude Include="Field.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="IField.h" />
+    <ClInclude Include="Painter.h" />
+    <ClInclude Include="PatrolBoat.h" />
+    <ClInclude Include="IPlayer.h" />
+    <ClInclude Include="RandomPlayer.h" />
+    <ClInclude Include="Ship.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="ConsolePlayer.cpp" />
+    <ClCompile Include="Field.cpp" />
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="IField.cpp" />
+    <ClCompile Include="Painter.cpp" />
+    <ClCompile Include="RandomPlayer.cpp" />
+    <ClCompile Include="Ship.cpp" />
     <ClCompile Include="lab3_Battleship.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

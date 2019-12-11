@@ -13,10 +13,58 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Файлы заголовков\Ships">
+      <UniqueIdentifier>{082bae41-3dd3-4b2e-af21-6af541c3f2e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Players">
+      <UniqueIdentifier>{bfda1a8c-1679-404a-a7dc-475ba6e47309}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Players">
+      <UniqueIdentifier>{fc7dd8f0-3124-4050-a620-632dc7110766}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
       <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="IField.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Battleship.h">
+      <Filter>Файлы заголовков\Ships</Filter>
+    </ClInclude>
+    <ClInclude Include="Carrier.h">
+      <Filter>Файлы заголовков\Ships</Filter>
+    </ClInclude>
+    <ClInclude Include="Cruiser.h">
+      <Filter>Файлы заголовков\Ships</Filter>
+    </ClInclude>
+    <ClInclude Include="Destroyer.h">
+      <Filter>Файлы заголовков\Ships</Filter>
+    </ClInclude>
+    <ClInclude Include="PatrolBoat.h">
+      <Filter>Файлы заголовков\Ships</Filter>
+    </ClInclude>
+    <ClInclude Include="Ship.h">
+      <Filter>Файлы заголовков\Ships</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Field.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="IPlayer.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="ConsolePlayer.h">
+      <Filter>Файлы заголовков\Players</Filter>
+    </ClInclude>
+    <ClInclude Include="Painter.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="RandomPlayer.h">
+      <Filter>Файлы заголовков\Players</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -25,6 +73,27 @@
     </ClCompile>
     <ClCompile Include="lab3_Battleship.cpp">
       <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="IField.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="Ship.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="Field.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="ConsolePlayer.cpp">
+      <Filter>Исходные файлы\Players</Filter>
+    </ClCompile>
+    <ClCompile Include="Painter.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="RandomPlayer.cpp">
+      <Filter>Исходные файлы\Players</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
