@@ -1,7 +1,7 @@
 #pragma once
 #include "IPlayer.h"
 #include <time.h>
-class Game::IPlayer::RandomPlayer :
+class RandomPlayer :
 	public IPlayer
 {
 public:

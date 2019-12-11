@@ -1,8 +1,10 @@
 #pragma once
 #include <algorithm>
 #include <vector>
-#include "Game.h"
-class Game::Field :
+#include "IField.h"
+#include "Ship.h"
+
+class Field :
 	public IField
 {
 	std::vector<std::vector<Ship *>> field_;

@@ -1,21 +1,21 @@
 #include "pch.h"
 #include "Field.h"
+#include "Ship.h"
 
-
-void Game::Field::normCoord(size_t & head, size_t & tail)
+void Field::normCoord(size_t & head, size_t & tail)
 {
 	if (head < tail) {
 		std::swap(head, tail);
 	}
 }
 
-Game::Field::Field()
+Field::Field()
 	:field_(12, std::vector<Ship* >(12, nullptr))
 	, canvas_(12, std::vector<ushort>(12, 0))
 {
 }
 
-bool Game::Field::tryCell(size_t x, size_t y)
+bool Field::tryCell(size_t x, size_t y)
 {
 	if (canvas_[x][y] == DAMAGED_SEA || canvas_[x][y] == DAMAGED_SHIP) {
 		return false;
@@ -23,7 +23,7 @@ bool Game::Field::tryCell(size_t x, size_t y)
 	return true;
 }
 
-bool Game::Field::setShip(Ship * ship, size_t x_head, size_t y_head, size_t x_tail, size_t y_tail)
+bool Field::setShip(Ship * ship, size_t x_head, size_t y_head, size_t x_tail, size_t y_tail)
 {
 	normCoord(x_head, x_tail);
 	normCoord(y_head, y_tail);
@@ -64,20 +64,20 @@ bool Game::Field::setShip(Ship * ship, size_t x_head, size_t y_head, size_t x_ta
 	}
 }
 
-Game::Ship * Game::Field::checkCell(size_t x, size_t y)
+Ship * Field::checkCell(size_t x, size_t y)
 {
 	Ship* currValue = field_[x][y];
 	if (currValue != nullptr) {
-		canvas_[x][y] = Game::DAMAGED_SHIP;
+		canvas_[x][y] = DAMAGED_SHIP;
 	}
 	else {
-		canvas_[x][y] = Game::DAMAGED_SEA;
+		canvas_[x][y] = DAMAGED_SEA;
 	}
 	return currValue;
 }
 
 
-Game::Field::~Field()
+Field::~Field()
 {
 	field_.clear();
 }

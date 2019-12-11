@@ -1,7 +1,8 @@
 #pragma once
 #include <iostream>
-#include "Game.h"
-class Game::Painter
+#include "IPlayer.h"
+
+class Painter
 {
 public:
 	static void printMessage(std::string const& text);

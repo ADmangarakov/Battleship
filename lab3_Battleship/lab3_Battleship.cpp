@@ -3,5 +3,5 @@
 
 int main()
 {
-	Game newGame(Game::CONSOLE, Game::RANDOM);
+	Game newGame(CONSOLE, RANDOM);
 }

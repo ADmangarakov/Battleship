@@ -2,7 +2,7 @@
 #include "RandomPlayer.h"
 #include "Painter.h"
 
-bool Game::IPlayer::RandomPlayer::makeMove()
+bool RandomPlayer::makeMove()
 {
 	srand(time(NULL));
 	while (true) {
@@ -20,7 +20,7 @@ bool Game::IPlayer::RandomPlayer::makeMove()
 	}
 }
 
-void Game::IPlayer::RandomPlayer::arrangeShips()
+void RandomPlayer::arrangeShips()
 {
 	srand(time(NULL));
 	size_t i = 0;
@@ -38,19 +38,19 @@ void Game::IPlayer::RandomPlayer::arrangeShips()
 			x2 = x1 + ships_[i]->getLenght() - 1;
 		}
 		if (!myField_->setShip(ships_[i], x1, y1, x2, y2)) {
-			Game::Painter::printErrMessage("Wrong place!");
+			Painter::printErrMessage("Wrong place!");
 			continue;
 		}
 		++i;
 	}
 }
 
-Game::IPlayer::RandomPlayer::RandomPlayer()
+RandomPlayer::RandomPlayer()
 	:IPlayer()
 {
 }
 
 
-Game::IPlayer::RandomPlayer::~RandomPlayer()
+RandomPlayer::~RandomPlayer()
 {
 }

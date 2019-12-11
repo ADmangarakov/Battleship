@@ -1,6 +1,7 @@
 #pragma once
 #include "IPlayer.h"
-class Game::IPlayer::ConsolePlayer :
+
+class ConsolePlayer :
 	public IPlayer
 {
 public:

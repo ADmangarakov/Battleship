@@ -1,11 +1,16 @@
 #include "pch.h"
 #include "Game.h"
 #include "IPlayer.h"
+#include "ConsolePlayer.h"
+#include "RandomPlayer.h"
+#include "Painter.h"
 
 void Game::StartGame()
 {
-	Player1_->setEnemField(Player2_);
-	Player2_->setEnemField(Player1_);
+	player1_->setEnemField(player2_);
+	player2_->setEnemField(player1_);
+	Painter::updateCanvas(*player1_);
+	
 }
 
 Game::Game(PlayerType player1, PlayerType player2)
@@ -13,19 +18,19 @@ Game::Game(PlayerType player1, PlayerType player2)
 	, playerType2_(player2)
 {
 	switch (player1) {
-	case Game::CONSOLE:
-		Player1_ = new Game::IPlayer::ConsolePlayer();
+	case CONSOLE:
+		player1_ = new ConsolePlayer();
 		break;
-	case Game::RANDOM:
-		Player1_ = new Game::IPlayer::RandomPlayer();
+	case RANDOM:
+		player1_ = new RandomPlayer();
 		break;
 	}
 	switch (player2) {
-	case Game::CONSOLE:
-		Player2_ = new Game::IPlayer::ConsolePlayer();
+	case CONSOLE:
+		player2_ = new ConsolePlayer();
 		break;
-	case Game::RANDOM:
-		Player2_ = new Game::IPlayer::RandomPlayer();
+	case RANDOM:
+		player2_ = new RandomPlayer();
 		break;
 	default:
 		break;
@@ -36,6 +41,6 @@ Game::Game(PlayerType player1, PlayerType player2)
 
 Game::~Game()
 {
-	delete Player1_;
-	delete Player2_;
+	delete player1_;
+	delete player2_;
 }

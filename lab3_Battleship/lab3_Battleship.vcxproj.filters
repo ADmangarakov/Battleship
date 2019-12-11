@@ -22,6 +22,9 @@
     <Filter Include="Исходные файлы\Players">
       <UniqueIdentifier>{fc7dd8f0-3124-4050-a620-632dc7110766}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Исходные файлы\Ships">
+      <UniqueIdentifier>{cc6a8c1e-e674-4379-bd1e-c389102fbb3a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -94,6 +97,24 @@
     </ClCompile>
     <ClCompile Include="RandomPlayer.cpp">
       <Filter>Исходные файлы\Players</Filter>
+    </ClCompile>
+    <ClCompile Include="IPlayer.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="Destroyer.cpp">
+      <Filter>Исходные файлы\Ships</Filter>
+    </ClCompile>
+    <ClCompile Include="Battleship.cpp">
+      <Filter>Исходные файлы\Ships</Filter>
+    </ClCompile>
+    <ClCompile Include="Carrier.cpp">
+      <Filter>Исходные файлы\Ships</Filter>
+    </ClCompile>
+    <ClCompile Include="Cruiser.cpp">
+      <Filter>Исходные файлы\Ships</Filter>
+    </ClCompile>
+    <ClCompile Include="PatrolBoat.cpp">
+      <Filter>Исходные файлы\Ships</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

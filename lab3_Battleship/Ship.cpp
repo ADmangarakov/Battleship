@@ -2,23 +2,23 @@
 #include "Game.h"
 #include "Ship.h"
 
-Game::Ship::Ship(size_t health)
+Ship::Ship(size_t health)
 	:health_(health)
 	, len_(health)
 {
 }
 
-bool Game::Ship::isDead()
+bool Ship::isDead()
 {
 	return health_;
 }
 
-void Game::Ship::damageDeck()
+void Ship::damageDeck()
 {
 	--health_;
 }
 
 
-Game::Ship::~Ship()
+Ship::~Ship()
 {
 }

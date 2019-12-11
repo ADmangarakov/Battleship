@@ -1,6 +1,8 @@
 #pragma once
-class Game::Ship::Carrier :
-	public Game::Ship
+#include "Ship.h"
+
+class Carrier :
+	public Ship
 {
 	ushort getSize() { return 5; }
 	std::string getName() { return "Carrier"; }
@@ -11,13 +13,4 @@ public:
 
 
 
-Game::Ship::Carrier::Carrier()
-	:Ship(getSize())
-{
-}
 
-
-Game::Ship::Carrier::~Carrier()
-{
-	
-}

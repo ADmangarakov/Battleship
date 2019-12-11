@@ -1,42 +1,43 @@
 #include "pch.h"
-#include "Game.h"
+#include "Painter.h"
+#include "ConsolePlayer.h"
 
-void Game::IPlayer::ConsolePlayer::arrangeShips()
+void ConsolePlayer::arrangeShips()
 {
 	std::string coord;
 	size_t x1, x2, y1, y2;
 	size_t i = 0;
 	while (i < 10) {
-		Game::Painter::printMessage("Set the ", ships_[i]->getName(), ships_[i]->getLenght());
+		Painter::printMessage("Set the ", ships_[i]->getName(), ships_[i]->getLenght());
 		std::cin >> coord;
 		try {
 			parseCoord(coord, x1, y1);
 			parseCoord(coord.substr(coord.find(" ") + 1), x2, y2);
 		}
 		catch (const std::exception& e) {
-			Game::Painter::printErrMessage(e.what());
+			Painter::printErrMessage(e.what());
 			continue;
 		}
 		if (x1 - x2 == 0) {
 			int dif = y1 - y2;
 			if (abs(dif) > ships_[i]->getLenght()) {
-				Game::Painter::printErrMessage("Bad lenght");
+				Painter::printErrMessage("Bad lenght");
 				continue;
 			}
 		}
 		else if (y1 - y2 == 0) {
 			int dif = x1 - x2;
 			if (abs(dif) > ships_[i]->getLenght()) {
-				Game::Painter::printErrMessage("Bad lenght");
+				Painter::printErrMessage("Bad lenght");
 				continue;
 			}
 		}
 		else {
-			Game::Painter::printErrMessage("Bad coord");
+			Painter::printErrMessage("Bad coord");
 			continue;
 		}
 		if (!myField_->setShip(ships_[i], x1, y1, x2, y2)) {
-			Game::Painter::printErrMessage("Wrong place!");
+			Painter::printErrMessage("Wrong place!");
 			continue;
 		}
 		++i;
@@ -44,9 +45,9 @@ void Game::IPlayer::ConsolePlayer::arrangeShips()
 
 }
 
-bool Game::IPlayer::ConsolePlayer::makeMove()
+bool ConsolePlayer::makeMove()
 {
-	Game::Painter::printMessage("Make your move");
+	Painter::printMessage("Make your move");
 	size_t x, y;
 	std::string coord;
 	std::cin >> coord;
@@ -72,12 +73,11 @@ bool Game::IPlayer::ConsolePlayer::makeMove()
 }
 
 
-Game::IPlayer::ConsolePlayer::ConsolePlayer()
+ConsolePlayer::ConsolePlayer()
 	:IPlayer()
 {
 }
 
-
-Game::IPlayer::ConsolePlayer::~ConsolePlayer()
+ConsolePlayer::~ConsolePlayer()
 {
 }

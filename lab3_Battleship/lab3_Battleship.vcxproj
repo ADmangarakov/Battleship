@@ -167,11 +167,17 @@
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Battleship.cpp" />
+    <ClCompile Include="Carrier.cpp" />
     <ClCompile Include="ConsolePlayer.cpp" />
+    <ClCompile Include="Cruiser.cpp" />
+    <ClCompile Include="Destroyer.cpp" />
     <ClCompile Include="Field.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="IField.cpp" />
+    <ClCompile Include="IPlayer.cpp" />
     <ClCompile Include="Painter.cpp" />
+    <ClCompile Include="PatrolBoat.cpp" />
     <ClCompile Include="RandomPlayer.cpp" />
     <ClCompile Include="Ship.cpp" />
     <ClCompile Include="lab3_Battleship.cpp" />

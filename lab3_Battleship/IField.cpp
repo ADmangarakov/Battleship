@@ -2,11 +2,11 @@
 #include "IField.h"
 
 
-Game::IField::IField()
+IField::IField()
 {
 }
 
 
-Game::IField::~IField()
+IField::~IField()
 {
 }

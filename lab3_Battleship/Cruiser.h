@@ -1,5 +1,6 @@
 #pragma once
-class Game::Ship::Cruiser :
+#include "Ship.h"
+class Cruiser :
 	public Ship
 {
 	ushort getSize() { return 3; }
@@ -11,12 +12,3 @@ public:
 
 
 
-Game::Ship::Cruiser::Cruiser()
-	:Ship(getSize())
-{
-}
-
-
-Game::Ship::Cruiser::~Cruiser()
-{
-}

@@ -1,14 +1,21 @@
 #pragma once
 #include <vector>
 #include <string>
+#include "Ship.h"
 
+enum FieldState
+{
+	UNKNOWN,
+	DAMAGED_SHIP,
+	DAMAGED_SEA,
+	EMPTY
+};
 
-class Game::IField
+class IField
 {
 public:
 	IField();
 	virtual ~IField();
-
 	virtual bool tryCell(size_t x, size_t y) = 0;
 	virtual Ship* checkCell(size_t x, size_t y) = 0;
 	// Set the ship on the field.
