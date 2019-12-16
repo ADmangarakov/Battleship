@@ -7,9 +7,6 @@
 
 void Game::StartGame()
 {
-	player1_->setEnemField(player2_);
-	player2_->setEnemField(player1_);
-	Painter::updateCanvas(*player1_);
 	
 }
 
@@ -35,7 +32,6 @@ Game::Game(PlayerType player1, PlayerType player2)
 	default:
 		break;
 	}
-	StartGame();
 }
 
 

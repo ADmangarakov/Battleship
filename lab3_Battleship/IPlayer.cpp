@@ -10,12 +10,11 @@ void IPlayer::parseCoord(std::string coord, size_t &x, size_t &y)
 	}
 }
 
-IPlayer::IPlayer()
-	:ships_(getShipsCount())
+IPlayer::IPlayer(size_t id)
+	:id_(id)
 {
-	myField_ = new Field();
 	ships_[0] = new Battleship();
-
+	
 	ships_[1] = new Cruiser();
 	ships_[2] = new Cruiser();
 
@@ -28,16 +27,17 @@ IPlayer::IPlayer()
 	ships_[8] = new PatrolBoat();
 	ships_[9] = new PatrolBoat();
 
+	myField_ = new Field(id);
 }
 
-IField* IPlayer::getField() const
+bool IPlayer::replyToEnemy(size_t x, size_t y)
 {
-	return myField_;
+	return myField_->checkCell(x, y);
 }
 
-void IPlayer::setEnemField(IPlayer * player)
+size_t IPlayer::getId()
 {
-	enemysField_ = player->getField();
+	return id_;
 }
 
 IPlayer::~IPlayer()

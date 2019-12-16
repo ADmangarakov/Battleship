@@ -17,10 +17,9 @@ class Game
 	IPlayer* player1_;
 	IPlayer* player2_;
 
-	void StartGame();
 public:
-
 	Game(PlayerType player1, PlayerType player2);
+	void StartGame();
 	~Game();
 };
 

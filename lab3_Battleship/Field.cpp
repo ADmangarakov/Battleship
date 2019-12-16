@@ -9,9 +9,11 @@ void Field::normCoord(size_t & head, size_t & tail)
 	}
 }
 
-Field::Field()
+Field::Field(size_t lead)
 	:field_(12, std::vector<Ship* >(12, nullptr))
 	, canvas_(12, std::vector<ushort>(12, 0))
+	, canvasMap_(12, std::vector<ushort>(12, 0))
+	, art_(lead)
 {
 }
 
@@ -64,11 +66,12 @@ bool Field::setShip(Ship * ship, size_t x_head, size_t y_head, size_t x_tail, si
 	}
 }
 
-Ship * Field::checkCell(size_t x, size_t y)
+bool Field::checkCell(size_t x, size_t y)
 {
 	Ship* currValue = field_[x][y];
 	if (currValue != nullptr) {
 		canvas_[x][y] = DAMAGED_SHIP;
+		currValue->damageDeck();
 	}
 	else {
 		canvas_[x][y] = DAMAGED_SEA;

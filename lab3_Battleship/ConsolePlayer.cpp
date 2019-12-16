@@ -4,10 +4,11 @@
 
 void ConsolePlayer::arrangeShips()
 {
+	size_t const SHIPS_NUMBER = 10;
 	std::string coord;
 	size_t x1, x2, y1, y2;
 	size_t i = 0;
-	while (i < 10) {
+	while (i < SHIPS_NUMBER) {
 		Painter::printMessage("Set the ", ships_[i]->getName(), ships_[i]->getLenght());
 		std::cin >> coord;
 		try {

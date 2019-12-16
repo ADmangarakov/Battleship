@@ -152,7 +152,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Battleship.h" />
-    <ClInclude Include="Carrier.h" />
     <ClInclude Include="ConsolePlayer.h" />
     <ClInclude Include="Cruiser.h" />
     <ClInclude Include="Destroyer.h" />
@@ -168,7 +167,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Battleship.cpp" />
-    <ClCompile Include="Carrier.cpp" />
     <ClCompile Include="ConsolePlayer.cpp" />
     <ClCompile Include="Cruiser.cpp" />
     <ClCompile Include="Destroyer.cpp" />
